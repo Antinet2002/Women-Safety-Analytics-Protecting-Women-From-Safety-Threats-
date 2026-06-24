@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Emergency</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Emergency Report</h2>
+
+    <input type="text" id="name" placeholder="Your Name">
+
+    <select id="threat">
+        <option>Harassment</option>
+        <option>Stalking</option>
+        <option>Assault</option>
+        <option>Emergency</option>
+    </select>
+
+    <button onclick="getLocation()">📍 Get Location</button>
+    <p id="loc"></p>
+
+    <button class="danger" onclick="sendAlert()">🚨 Send Alert</button>
+</div>
+
+<script>
+let lat = 0;
+let lon = 0;
+
+function getLocation(){
+    navigator.geolocation.getCurrentPosition(function(pos){
+        lat = pos.coords.latitude;
+        lon = pos.coords.longitude;
+
+        document.getElementById("loc").innerText =
+        "Location: " + lat + ", " + lon;
+    });
+}
+
+function sendAlert(){
+    fetch('/submit', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            name: document.getElementById("name").value,
+            threat: document.getElementById("threat").value,
+            lat: lat,
+            lon: lon
+        })
+    })
+    .then(r => r.json())
+    .then(data => alert(data.status));
+}
+</script>
+
+</body>
+</html>

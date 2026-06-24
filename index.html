@@ -1,27 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Safety Platform</title>
+    <title>Women Safety Platform</title>
     <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+
+            background-image: url("/static/image/Gemini_Generated_Image_h1fcegh1fcegh1fc.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 5;
+            right: 0;
+            bottom: 0;
+
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+
+        .hero {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            margin: 60px;
+            padding: 45px 50px;
+            background: rgb(86, 132, 240);
+            color: black;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .buttons a:hover {
+            background: #dfdfe6;
+            color: rgb(3, 7, 33);
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Women's Safety Analytics Platform</h1>
 
-    <a href="/report"><button>Report Threat</button></a>
-    <a href="/dashboard"><button>View Dashboard</button></a>
+<div class="hero">
+    <h1>Women Safety Analytics Protecting Women From Safety Threats</h1>
+    <p>Real-time threat reporting & emergency response system</p>
 
-    <script>
-function saveContact() {
-    let name = document.getElementById("cname").value;
-    let phone = document.getElementById("cphone").value;
+    <div class="buttons">
+        <a href="/report">Report Emergency</a>
+        <a href="/dashboard">View Dashboard</a>
+    </div>
+</div>
 
-    localStorage.setItem("contactName", name);
-    localStorage.setItem("contactPhone", phone);
-
-    document.getElementById("saved").innerText =
-        "Contact Saved: " + name + " (" + phone + ")";
-}
-</script>
 </body>
 </html>
