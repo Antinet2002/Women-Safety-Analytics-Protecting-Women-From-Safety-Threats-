@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Safety Platform</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1>Women's Safety Analytics Platform</h1>
+
+    <a href="/report"><button>Report Threat</button></a>
+    <a href="/dashboard"><button>View Dashboard</button></a>
+
+    <script>
+function saveContact() {
+    let name = document.getElementById("cname").value;
+    let phone = document.getElementById("cphone").value;
+
+    localStorage.setItem("contactName", name);
+    localStorage.setItem("contactPhone", phone);
+
+    document.getElementById("saved").innerText =
+        "Contact Saved: " + name + " (" + phone + ")";
+}
+</script>
+</body>
+</html>
