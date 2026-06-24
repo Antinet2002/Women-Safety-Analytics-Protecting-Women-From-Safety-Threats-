@@ -1,0 +1,149 @@
+body {
+
+    .hero h1 {
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+    margin: 0;
+    font-family: Arial;
+    color: rgb(116, 176, 228);
+
+    background-image: url("/static/image/Gemini_Generated_Image_h1fcegh1fcegh1fc.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.card {
+    font-size: 20px;
+}
+
+.card h2 {
+    font-size: 42px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.card input,
+.card select {
+    font-size: 18px;
+    padding: 12px;
+    width: 250px;
+    margin: 10px;
+}
+
+.card button {
+    font-size: 18px;
+    padding: 12px 18px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.danger {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+#loc {
+    font-size: 18px;
+    font-weight: bold;
+} 
+
+.card {
+    font-size: 20px;
+}
+.card h2 {
+    font-size: 44px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+th {
+    font-size: 20px;
+    font-weight: 800;
+    background: rgba(0,0,0,0.6);
+    color: white;
+}
+tr {
+    background: rgba(255,255,255,0.1);
+}
+
+.buttons a {
+    display: inline-block;
+    padding: 16px 28px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    transition: 0.3s ease;
+}
+
+.buttons a:hover {
+    background: #ff4d6d;
+    color: white;
+    transform: scale(1.05);
+}
+
+.buttons a {
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.hero p {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    opacity: 0.9;
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 0;
+}
+
+.container, .hero, .card {
+    position: relative;
+    z-index: 1;
+}
+
